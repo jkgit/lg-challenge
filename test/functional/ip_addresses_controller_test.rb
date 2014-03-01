@@ -8,7 +8,7 @@ class IpAddressesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:ip_addresses)
+    assert_not_nil assigns(:records)
   end
 
   test "should get new" do
@@ -18,10 +18,10 @@ class IpAddressesControllerTest < ActionController::TestCase
 
   test "should create ip_address" do
     assert_difference('IpAddress.count') do
-      post :create, ip_address: { ipv4: @ip_address.ipv4 }
+      post :create, record: { ipv4: @ip_address.ipv4 }
     end
 
-    assert_redirected_to ip_address_path(assigns(:ip_address))
+    assert_redirected_to ip_addresses_path
   end
 
   test "should show ip_address" do
@@ -35,8 +35,8 @@ class IpAddressesControllerTest < ActionController::TestCase
   end
 
   test "should update ip_address" do
-    put :update, id: @ip_address, ip_address: { ipv4: @ip_address.ipv4 }
-    assert_redirected_to ip_address_path(assigns(:ip_address))
+    put :update, id: @ip_address, record: { ipv4: @ip_address.ipv4 }
+    assert_redirected_to ip_addresses_path
   end
 
   test "should destroy ip_address" do

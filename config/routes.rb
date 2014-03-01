@@ -1,6 +1,11 @@
 LgChallenge::Application.routes.draw do
   resources :ip_addresses do as_routes end
-
+  
+  post '/ip/add', to: 'ip_addresses#add'
+  get 'ip/get/(:ipv4_address)', to: 'ip_addresses#get', constraints: {ipv4_address: /([0-9]+(\.|$)){4}|/}
+  get '/ip/all', to: 'ip_addresses#get_all'
+  delete '/ip/all', to: 'ip_addresses#delete_all'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

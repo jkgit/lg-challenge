@@ -39,3 +39,6 @@ gem 'jquery-rails'
 
 # Use Active Scaffolding to be able to see what is in the db
 gem 'active_scaffold'
+
+# Use RSpec to test API 
+gem 'rspec-rails'
