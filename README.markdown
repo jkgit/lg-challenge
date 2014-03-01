@@ -16,16 +16,19 @@ A request to /ip/all should return a JSON-encoded list of all the IP addresses c
 ## DELETE /ip/all
 A DELETE request to /ip/all should remove all IP addresses from the server's list
 
+## Installing application
+
+	% git clone https://github.com/jkgit/lg-challenge.git
+	% cd lg-challenge/
+	% bundle install
+	% rake db:migrate
+	
 ## Running application
 
-	% rake db:migrate
     % rails server -p 9999
     
-## Running Rails tests
+## Running Rails tests (make sure server is running for tests)
 
-Execute the following commands in your shell or command line (or IDE)
-
-    % rake db:reset
     % rake db:test:load
     % rake test    
     % rake spec    
