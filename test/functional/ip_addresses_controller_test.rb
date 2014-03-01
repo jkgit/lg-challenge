@@ -46,4 +46,6 @@ class IpAddressesControllerTest < ActionController::TestCase
 
     assert_redirected_to ip_addresses_path
   end
+  
+  # Endpoints are tested in a request spec and an integration test
 end
